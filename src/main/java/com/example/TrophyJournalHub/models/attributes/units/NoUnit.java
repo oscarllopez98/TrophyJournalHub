@@ -6,4 +6,14 @@ public class NoUnit implements Unit {
     public String getUnit() {
         return "";
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof NoUnit;
+    }
+
+    @Override
+    public int hashCode() {
+        return 31; // Arbitrary constant value
+    }
 }
