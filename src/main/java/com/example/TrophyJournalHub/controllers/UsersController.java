@@ -29,8 +29,8 @@ public class UsersController {
     @GetMapping("/{id}")
     public ResponseEntity<User> getUser(@PathVariable Long id) {
         return userRepository.findById(id)
-                .map(ResponseEntity::ok)
-                .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
+            .map(ResponseEntity::ok)
+            .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
     }
 
     @PostMapping
