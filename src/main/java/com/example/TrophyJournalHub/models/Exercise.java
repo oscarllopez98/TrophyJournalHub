@@ -1,12 +1,16 @@
 package com.example.TrophyJournalHub.models;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.util.Date;
 import java.util.List;
 import java.util.ArrayList;
 
+@Entity
+@Table(name = "exercises")
 public class Exercise {
     @Id
     @GeneratedValue
